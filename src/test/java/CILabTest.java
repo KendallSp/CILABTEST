@@ -2,6 +2,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
 public class CILabTest {
@@ -20,12 +21,14 @@ public class CILabTest {
 
     @Test
     public void detectCapitalUseTest1() {
-       fail("Not yet implemented");
+      myString.setString("This String Has Capitols");
+      assertEquals("This String Has Capitols", myString.getString());
 
     }
     @Test
     public void detectCapitalUseTest2() {
-        fail("Not yet implemented");
+        myString.setString("THIS STRING IS ONLY CapiTOLS");
+        assertEquals("THIS STRING IS ONLY CapiTOLS", myString.getString());
     }
 
 
