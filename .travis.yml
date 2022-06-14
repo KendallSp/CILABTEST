@@ -21,6 +21,8 @@ jobs:
   include:
     - script: mvn clean verify package
 
+before_install:
+  - sudo apt-get -y install libxml2-dev
 # This is to enable CodeCov's coverage
 # If a build is successful, the code is submitted for coverage analysis
 # On every build, Travis CI calls the online Codecov shell script,
